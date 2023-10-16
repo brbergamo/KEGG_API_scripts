@@ -16,10 +16,10 @@ def menu():
     return args
 
 def keg_to_tsv(filek):
-    '''
+    """
     This parser extracts info from file .keg and transforms it in a TSV file with 
     columns:
-        KO - KO number;
+        K0 - K0 number;
         Group - B hierarchy - the most general classification;
         General Classification - C hierarchy;
         Description - D hierarchy - a specific description of protein related to KO.
@@ -29,7 +29,7 @@ def keg_to_tsv(filek):
         
     Output:
         tsv table
-    '''
+    """
     data = {}
     blabel = None
     clabel = None
@@ -66,7 +66,7 @@ def keg_to_tsv(filek):
         'General Classification': ' | '.join, 'Description': ' | '.join})
 
     # Saving DataFrame as TSV
-    dfgroupped.to_csv('mapp_K03.tsv', sep='\t', index=False)
+    dfgroupped.to_csv('mapp_K0.tsv', sep='\t', index=False)
 
 def main():
     options = menu()
