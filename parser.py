@@ -59,10 +59,10 @@ def keg_to_tsv(filek):
     # Convert dictionary to DataFrame
     df = pd.DataFrame([(k1, k2, k3, v3) for k1, v1 in data.items() for k2, v2 
                        in v1.items() for k3, v3 in v2.items()],
-                    columns=['Group','General Classification', 'KO','Description'])
+                    columns=['Group','General Classification', 'K0','Description'])
 
     # Grouping values by "KO" and "Group" and joining other columns
-    dfgroupped = df.groupby(['KO', 'Group'], as_index=False).agg({
+    dfgroupped = df.groupby(['K0', 'Group'], as_index=False).agg({
         'General Classification': ' | '.join, 'Description': ' | '.join})
 
     # Saving DataFrame as TSV
