@@ -33,7 +33,6 @@ def keg_to_tsv(filek):
     data = {}
     blabel = None
     clabel = None
-    blabel = None
     dlabel = None
 
 # Reading file and extrating info
